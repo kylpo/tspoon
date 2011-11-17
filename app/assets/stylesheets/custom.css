@@ -1,0 +1,48 @@
+body {
+	background: #B4B0B1;
+}
+
+.container {
+	width:				500px;
+	background:		#fff;
+}
+
+.header {
+	margin-left:	auto;
+	margin-right:	auto;
+}
+
+.nav {
+	text-align:		center;
+	float:				right;
+	background:		#fff;
+}
+
+.header img {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.main_form {
+	display:				block;
+	margin-left:		auto;
+	margin-right:		auto;
+}
+
+.form_container input {
+	text-align:		center;
+	margin:			0 auto;
+	font-size:		30px;
+	width:				450px;
+}
+
+.form_table {
+	text-align:		center;
+}
+
+.round {
+	-moz-border-radius:			10px;
+	-webkit-border-radius:	10px;
+	border-radius:					10px;
+}
