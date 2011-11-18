@@ -84,6 +84,10 @@ body {
 	text-align:	center;
 }
 
+.button:hover {
+	color:			#FF8205;
+}
+
 #submit_button {
 	font-size:	50px;
 	position:		block;
