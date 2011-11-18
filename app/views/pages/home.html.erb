@@ -10,14 +10,16 @@ Alex Beal | Logout
 			<div class="form_container round">
 				<form class="main_form">
 						<input type="text" id="hash_input" name="hash" value="Enter a hash" />
-						<input type="file" id="file_input" name="file"  />
+						<input type="file" class="hidden" id="file_input" name="file"  />
 				</form>
 			</div>
-			<div class="input_swap_container">
-				Or, upload a <a href="#" class="swap_button button round">file</a> and we'll hash it for you.
+			<div class="input_swap_container" id="file_button_div">
+				Or, upload a <a href="#" class="swap_button button round">file</a> 
+				<br />and we'll hash it for you.
 			</div>
-			<div class="input_swap_container" id="hash_button">
-				Or, upload a <a href="#" class="swap_button button round">hash</a> and we'll stamp it.
+			<div class="input_swap_container hidden" id="hash_button_div">
+				Or, upload a <a href="#" class="swap_button button round">hash</a> 
+				<br />and we'll stamp it.
 			</div>
 			<div class="button_div">
 				<a href="#" id="submit_button" class="button round">Stamp!</a>
