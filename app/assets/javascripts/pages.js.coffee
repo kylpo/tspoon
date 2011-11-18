@@ -19,5 +19,15 @@ $(document).ready( ->
 			input_state = "hash"
 	)
 
+	# Clearing and restoring the default value to the hash field
+	$("#hash_input").focus( ->
+		if $(this).prop("value") == "Enter a hash"
+			$(this).prop("value", "")
+	)
+	$("#hash_input").blur( ->
+		if $(this).prop("value") == ""
+			$(this).prop("value", "Enter a hash")
+	)
+
 	# Other stuff
 )	

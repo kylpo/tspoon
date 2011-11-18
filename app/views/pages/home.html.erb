@@ -8,10 +8,9 @@ Alex Beal | Logout
 
 <div class="content round">
 			<div class="form_container round">
-				<form class="main_form">
-						<input type="text" id="hash_input" name="hash" value="Enter a hash" />
-						<input type="file" class="hidden" id="file_input" name="file"  />
-				</form>
+				<%= form_tag("/timestamp", :method => "post", :class => "main_form") do %>
+					<%= text_field_tag(:hash_input, "Enter a hash") %>
+					<%= file_field_tag( :file_input, :class => "hidden") %>
 			</div>
 			<div class="input_swap_container" id="file_button_div">
 				Or, upload a <a href="#" class="swap_button button round">file</a> 
@@ -22,6 +21,7 @@ Alex Beal | Logout
 				<br />and we'll stamp it.
 			</div>
 			<div class="button_div">
-				<a href="#" id="submit_button" class="button round">Stamp!</a>
+				<%= submit_tag("Stamp!", :id => "submit_button", :class => "button round") %>
+				<% end %>
 			</div>
 </div>

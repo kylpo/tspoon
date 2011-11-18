@@ -83,6 +83,7 @@ body {
 	color:			#fff;
 	text-align:	center;
 }
+
 #submit_button {
 	font-size:	50px;
 	position:		block;
@@ -104,7 +105,7 @@ body {
 .button_div {
 	text-align:			center;
 	position: 			relative;
-	top:						65px;
+	top:						20px;
 }
 
 a {
