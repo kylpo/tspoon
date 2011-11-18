@@ -13,11 +13,11 @@ Alex Beal | Logout
 					<%= file_field_tag(:file_input, :class => "hidden file_input_component") %>
 			</div>
 			<div class="input_swap_container hash_input_component" id="file_button_div">
-				Or, upload a <a href="#" class="swap_button button round">file</a> 
+				Or upload a <%= link_to("file", "#", :class=> "swap_button button round") %> 
 				<br />and we'll hash it for you.
 			</div>
 			<div class="input_swap_container file_input_component hidden" id="hash_button_div">
-				Or, upload a <a href="#" class="swap_button button round">hash</a> 
+				Or upload a <%= link_to("hash", "#", :class=> "swap_button button round") %> 
 				<br />and we'll stamp it.
 			</div>
 			<div class="button_div">
