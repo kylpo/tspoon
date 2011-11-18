@@ -17,7 +17,7 @@ class OpensslDispatcher
 	end
 
 	def self.doCreateTSRFromTSQ(tsAuthority, tsqTmpFile, tsrTmpFile)
-		unless system(@@tsgetCommand % [tsAuthority, tsqTmpFile, tsrTmpFile]) and $?.exitstatus == 1
+		unless system(@@tsgetCommand % [tsAuthority, tsrTmpFile.path, tsqTmpFile.path]) and $?.exitstatus == 0
 			raise "Openssl TSGET supplemental script failed!"
 		end
 	end
