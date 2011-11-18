@@ -12,6 +12,7 @@ group :assets do
   gem 'coffee-rails', '~> 3.1.1'
   gem 'uglifier', '>= 1.0.3'
 end
+
 group :production do
   gem 'pg'
 end
@@ -32,5 +33,8 @@ gem "bcrypt-ruby", :require => "bcrypt"
 
 group :development, :test do
   gem 'sqlite3-ruby', :require => 'sqlite3'
+  # Pretty printed test output
   gem 'turn', :require => false
+	gem 'rspec-rails'
+	gem 'webrat'
 end

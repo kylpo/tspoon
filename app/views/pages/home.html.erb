@@ -1,0 +1,27 @@
+<div class="span-4 last nav round">
+Alex Beal | Logout
+</div>
+
+<div class="header round">
+	<%= image_tag "main_logo.png", :alt => "TSPoon Logo", :class => "round" %>
+</div>
+
+<div class="content round">
+			<div class="form_container round">
+				<%= form_tag("/timestamp", :method => "post", :class => "main_form") do %>
+					<%= text_field_tag(:hash_input, "Enter a hash", :class => "hash_input_component") %>
+					<%= file_field_tag(:file_input, :class => "hidden file_input_component") %>
+			</div>
+			<div class="input_swap_container hash_input_component" id="file_button_div">
+				Or upload a <%= link_to("file", "#", :class=> "swap_button button round") %> 
+				<br />and we'll hash it for you.
+			</div>
+			<div class="input_swap_container file_input_component hidden" id="hash_button_div">
+				Or upload a <%= link_to("hash", "#", :class=> "swap_button button round") %> 
+				<br />and we'll stamp it.
+			</div>
+			<div class="button_div">
+				<%= submit_tag("Stamp!", :id => "submit_button", :class => "button round") %>
+				<% end %>
+			</div>
+</div>
