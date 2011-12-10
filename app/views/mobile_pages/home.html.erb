@@ -1,0 +1,19 @@
+<!-- Start of first page: #one -->
+<div data-role="page" id="one">
+
+	<div data-role="header">
+		<h1>TSPoon - Home</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >	
+		<div data-role="fieldcontain" class="ui-hide-label">
+			<%= form_tag("/timestamp", :method => "post") do %>
+				<h3>Input a hash!</h3>
+				<label for="hash">Hash:</label>
+				<%= text_field_tag(:hash_input, nil, :id => "hash", :placeholder => "Enter a hash") %>
+				<h3>Or upload a file!</h3>
+				<label for="file">File:</label>
+				<%= file_field_tag(:file_input, :id => "file") %>
+				<%= submit_tag("Stamp!") %>
+			<% end %>
+		</div>
