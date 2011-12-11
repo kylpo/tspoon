@@ -11,10 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111211201546) do
+ActiveRecord::Schema.define(:version => 20111211230931) do
 
   create_table "timestamps", :force => true do |t|
-    t.string   "value"
+    t.binary   "value",      :limit => 255
     t.datetime "created_at"
     t.datetime "updated_at"
   end
