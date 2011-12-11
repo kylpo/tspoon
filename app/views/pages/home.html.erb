@@ -4,7 +4,7 @@
 
 <div class="content round">
 			<div class="form_container round">
-				<%= form_tag("/timestamp", :method => "post", :class => "main_form") do %>
+				<%= form_tag(timestamps_path, :method => "post", :class => "main_form") do %>
 					<%= text_field_tag(:hash_input, "Enter a hash", :class => "hash_input_component") %>
 					<%= file_field_tag(:file_input, :class => "hidden file_input_component") %>
 			</div>

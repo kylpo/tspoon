@@ -1,3 +1,8 @@
+PATH
+  remote: lib/timestamper/
+  specs:
+    timestamper (1.0.0)
+
 GEM
   remote: http://rubygems.org/
   specs:
@@ -140,6 +145,7 @@ DEPENDENCIES
   rspec-rails
   sass-rails (~> 3.1.4)
   sqlite3-ruby
+  timestamper!
   turn
   uglifier (>= 1.0.3)
   webrat
