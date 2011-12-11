@@ -37,4 +37,6 @@ group :development, :test do
   gem 'turn', :require => false
 	gem 'rspec-rails'
 	gem 'webrat'
+	gem 'therubyracer'
+	gem 'execjs'
 end
