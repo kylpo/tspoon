@@ -3,7 +3,7 @@ require 'filetimestamper'
 
 class TimestampsController < ApplicationController
   def index
-    @timestamps = Timestamps.all
+    @timestamps = Timestamp.all
   end
 
   def create
