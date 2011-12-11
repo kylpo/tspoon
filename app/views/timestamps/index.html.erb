@@ -1,0 +1,19 @@
+<!-- Start of timestamps page: #timestamps -->
+<div data-role="page" id="timestamps">
+
+	<div data-role="header">
+		<h1>TSPoon - Timestamps</h1>
+	</div><!-- /header -->
+
+	<div data-role="content" >
+		<table>
+			<% @timestamps = [1,2,3] %>
+			<% @timestamps.reverse.each do | timestamp | %>
+			<tr>
+				<td><%= timestamp %></td>
+			</tr>
+			<% end %>
+		</table>
+	</div>
+
+</div>
