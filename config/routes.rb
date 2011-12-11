@@ -1,5 +1,5 @@
 Tspoon::Application.routes.draw do
-	
+
 	get "m" => "mobile_pages#home"
 
   get "log_out" => "sessions#destroy", :as => "log_out"
@@ -10,7 +10,8 @@ Tspoon::Application.routes.draw do
   root :to => "pages#home"
   resources :users
   resources :sessions
-
+  resources :timestamps
+  # get "timestamp" => "timestamp#create", :as => "timestamp"
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
