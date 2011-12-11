@@ -4,6 +4,8 @@ require "#{Rails.root}/lib/timestamper/timestamper.rb"
 
 class TimestampsController < ApplicationController
   def create
-    @timestamp = Timestamper.new
+    @timestamp = Timestamper.new(
+    Timestamp.create( :value => @timestamp.doTimestamp )
+
   end
 end
