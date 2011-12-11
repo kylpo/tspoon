@@ -1,1 +1,16 @@
-<p>Hello THAR</p>
+<div data-role="page" id="timestamps">
+
+  <div data-role="header">
+    <h1>TSPoon - Timestamps</h1>
+  </div><!-- /header -->
+
+  <div data-role="content" >
+    <table>
+      <% @timestamps.reverse.each do | timestamp | %>
+        <tr>
+          <td><%= timestamp %></td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
