@@ -1,38 +1,38 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Tspoon</title>
-	<!--[if lt IE 9]>
-	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
-	<%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
-	<%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
-	<%= stylesheet_link_tag 'blueprint/grid' %>
-	<!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen' %> <![endif]-->
+  <head>
+    <title>Tspoon</title>
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <%= stylesheet_link_tag 'blueprint/screen', :media => 'screen' %>
+    <%= stylesheet_link_tag 'blueprint/print', :media => 'print' %>
+    <%= stylesheet_link_tag 'blueprint/grid' %>
+    <!--[if lt IE 8]><%= stylesheet_link_tag 'blueprint/ie', :media => 'screen' %> <![endif]-->
 
-	<%= stylesheet_link_tag "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
+    <%= stylesheet_link_tag "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
 
-<div id="user_nav">
-  <% if current_user %>
-    Logged in as <%= current_user.email %>.
-    <%= link_to "Log out", log_out_path %>
-  <% else %>
-    <%= link_to "Sign up", sign_up_path %> or
-    <%= link_to "log in", log_in_path %>
-  <% end %>
-</div>
+    <div id="user_nav" class="span-4 last nav round">
+      <% if current_user %>
+        Logged in as <%= current_user.email %>.
+        <%= link_to "Log out", log_out_path %>
+      <% else %>
+        <%= link_to "Sign up", sign_up_path %> or
+        <%= link_to "log in", log_in_path %>
+      <% end %>
+    </div>
 
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
+    <% flash.each do |name, msg| %>
+      <%= content_tag :div, msg, :id => "flash_#{name}" %>
+    <% end %>
 
-<div class="container round">
-  <%= yield %>
-</div>
+    <div class="container round">
+      <%= yield %>
+    </div>
 
-</body>
+  </body>
 </html>
