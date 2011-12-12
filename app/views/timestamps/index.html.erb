@@ -8,7 +8,7 @@
     <table>
       <% @timestamps.reverse.each do |timestamp| %>
         <tr>
-          <td><%= timestamp %> </td>
+          <td><%= link_to timestamp_path(timestamp.id) %> </td>
       </tr>
     <% end %>
   </table>
