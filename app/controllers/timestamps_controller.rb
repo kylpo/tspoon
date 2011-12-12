@@ -9,11 +9,11 @@ class TimestampsController < ApplicationController
   def create
     if (params.has_key?(:file_input))
       timestamp = FileTimestamper.new( params[:file_input] )
-      Timestamp.create( :value => timestamp.doTimestamp )
+      Timestamp.create( :value => timestamp.doTimestamp, :user_id => session[:user_id])
       redirect_to timestamps_path
     elsif(params.has_key?(:hash_input))
       timestamp = HashTimestamper.new( params[:hash_input] )
-      Timestamp.create( :value => timestamp.doTimestamp )
+      Timestamp.create( :value => timestamp.doTimestamp, :user_id => session[:user_id])
       redirect_to timestamps_path
     else
       raise 'ERROR: Input (file or hash) required'

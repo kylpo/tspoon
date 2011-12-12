@@ -5,9 +5,9 @@
 		<h1>TSPoon - Home</h1>
 	</div><!-- /header -->
 
-	<div data-role="content" >	
+	<div data-role="content" >
 		<div data-role="fieldcontain" class="ui-hide-label">
-			<%= form_tag("/timestamp", :method => "post") do %>
+			<%= form_tag(timestamps_path, :method => "post") do %>
 				<h3>Input a hash!</h3>
 				<label for="hash">Hash:</label>
 				<%= text_field_tag(:hash_input, nil, :id => "hash", :placeholder => "Enter a hash") %>
