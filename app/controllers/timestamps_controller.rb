@@ -21,5 +21,6 @@ class TimestampsController < ApplicationController
   end
 
   def show
+    send_data params[:value]
   end
 end
