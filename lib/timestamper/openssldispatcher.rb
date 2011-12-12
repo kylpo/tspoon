@@ -11,7 +11,7 @@ class OpensslDispatcher
 	end
 
 	def self.doCreateTSQFromTmpFile(tmpFile, tsqTmpFile)
-		unless system(@@tsqCommand % ["-in", tmpFile.path, tsqTmpFile.path]) and $?.exitstatus == 0
+		unless system(@@tsqCommand % ["-data", tmpFile.path, tsqTmpFile.path]) and $?.exitstatus == 0
                         raise "Openssl TS query did not run properly!"
                 end
 	end
