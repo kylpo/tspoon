@@ -1,0 +1,16 @@
+<div data-role="page" id="timestamps">
+
+  <div data-role="header">
+    <h1>TSPoon - Timestamps</h1>
+  </div><!-- /header -->
+
+  <div data-role="content" >
+    <table>
+      <% @timestamps.reverse.each do |timestamp| %>
+        <tr>
+          <td><%= link_to timestamp.created_at, timestamp_path(timestamp.id) %> </td>
+      </tr>
+    <% end %>
+  </table>
+  </div>
+</div>
