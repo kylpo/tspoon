@@ -21,6 +21,6 @@ class TimestampsController < ApplicationController
   end
 
   def show
-    send_data params[:value]
+    send_data Timestamp.find(params[:id]).value
   end
 end
