@@ -11,13 +11,10 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20111211230931) do
+ActiveRecord::Schema.define(:version => 20111212042552) do
 
-  create_table "timestamps", :force => true do |t|
-    t.binary   "value",      :limit => 255
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
+# Could not dump table "timestamps" because of following StandardError
+#   Unknown type 'reference' for column 'user_id'
 
   create_table "users", :force => true do |t|
     t.string   "email"
